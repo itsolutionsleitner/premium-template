@@ -1,5 +1,18 @@
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const siteHeader = document.getElementById("siteHeader");
+const navToggle = document.getElementById("navToggle");
+const premiumNavLinks = document.getElementById("premiumNavLinks");
+
+navToggle.addEventListener("click", () => {
+  premiumNavLinks.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    siteHeader.classList.add("scrolled");
+  } else {
+    siteHeader.classList.remove("scrolled");
+  }
+});
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");

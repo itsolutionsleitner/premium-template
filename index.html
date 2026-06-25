@@ -4,51 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Premium Template | Moderne Webseite</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header class="header">
-  <nav class="navbar">
-    <a href="index.html" class="logo">Premium<span>Web</span></a>
+<header class="site-header" id="siteHeader">
+  <nav class="premium-nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Premium<span>Web</span></span>
+    </a>
 
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+      <span></span>
+      <span></span>
+    </button>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#prozess">Prozess</a></li>
-      <li><a href="#referenzen">Referenzen</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="kontakt.html" class="nav-button">Kontakt</a></li>
+    <ul class="premium-nav-links" id="premiumNavLinks">
+      <li><a href="#leistungen" class="nav-link">Leistungen</a></li>
+      <li><a href="#prozess" class="nav-link">Prozess</a></li>
+      <li><a href="#referenzen" class="nav-link">Referenzen</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#kontakt" class="nav-link nav-link-button">Kontakt</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
+<section class="hero hero-premium">
+  <div class="hero-glow hero-glow-one"></div>
+  <div class="hero-glow hero-glow-two"></div>
 
-    <div class="hero-content reveal">
-      <span class="eyebrow">Premium Website Template</span>
-      <h1>Eine moderne Webseite, die sofort professionell wirkt.</h1>
-      <p>
-        Perfekt für Dienstleister, Handwerker, Coaches, Agenturen und kleine Unternehmen,
-        die online hochwertig auftreten möchten.
-      </p>
+  <div class="hero-content reveal">
+    <span class="eyebrow">Premium Website Framework</span>
 
-      <div class="hero-buttons">
-        <a href="#leistungen" class="btn btn-primary">Vorlage ansehen</a>
-        <a href="kontakt.html" class="btn btn-outline">Kontakt aufnehmen</a>
+    <h1>
+      Webseiten,<br>
+      die verkaufen.
+    </h1>
+
+    <p class="text-large">
+      Ein modernes Frontend-System für hochwertige Unternehmensseiten,
+      Landingpages und digitale Markenauftritte.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#leistungen" class="btn btn-primary">Komponenten ansehen</a>
+      <a href="#kontakt" class="btn btn-outline">Projekt starten</a>
+    </div>
+
+    <div class="hero-trust">
+      <span>Ideal für</span>
+      <strong>Handwerker</strong>
+      <strong>Agenturen</strong>
+      <strong>Coaches</strong>
+      <strong>IT-Services</strong>
+    </div>
+  </div>
+
+  <div class="hero-dashboard reveal">
+    <div class="dashboard-header">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="dashboard-card main-metric">
+      <p>Performance Score</p>
+      <h3>98%</h3>
+      <div class="progress">
+        <div style="width: 98%;"></div>
       </div>
     </div>
 
-    <div class="hero-card reveal">
-      <p class="card-label">Live Vorteile</p>
-      <h3>+ Schneller Aufbau</h3>
-      <p>Modernes Design, klare Struktur, mobil optimiert und bereit für echte Kundenprojekte.</p>
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <p>SEO</p>
+        <strong>Optimiert</strong>
+      </div>
+
+      <div class="dashboard-card">
+        <p>Mobile</p>
+        <strong>Ready</strong>
+      </div>
     </div>
-  </section>
+
+    <div class="dashboard-card timeline-card">
+      <p>Projektstatus</p>
+      <div class="timeline-line">
+        <span class="active"></span>
+        <span class="active"></span>
+        <span></span>
+      </div>
+      <strong>Designphase</strong>
+    </div>
+  </div>
+</section>
 
   <section class="section stats">
     <div class="stat reveal">

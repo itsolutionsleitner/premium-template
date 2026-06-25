@@ -15,7 +15,7 @@
   --gradient-primary: linear-gradient(135deg, #2563eb, #06b6d4);
   --gradient-dark: linear-gradient(135deg, #050816, #111827);
 
-  --font-main: Arial, sans-serif;
+ --font-main: "Manrope", Arial, sans-serif;
 
   --container: 1180px;
 
