@@ -1,0 +1,137 @@
+.stat,
+.service-card,
+.process-card,
+.testimonial,
+.faq-item,
+.hero-card {
+  border-radius: var(--radius-lg);
+}
+
+.stat,
+.service-card,
+.testimonial,
+.faq-item,
+.hero-card {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.stat {
+  padding: 34px;
+  text-align: center;
+}
+
+.stat h2 {
+  color: var(--color-primary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.service-card {
+  padding: 32px;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-premium);
+}
+
+.icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: #dbeafe;
+  color: var(--color-primary);
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.process-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 34px;
+}
+
+.process-card strong {
+  color: var(--color-accent);
+  font-size: 24px;
+}
+
+.process-card h3 {
+  color: white;
+  margin: 16px 0 10px;
+}
+
+.process-card p {
+  color: #cbd5e1;
+}
+
+.testimonial {
+  padding: 50px;
+  max-width: 860px;
+}
+
+.testimonial p {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  line-height: 1.35;
+  margin-bottom: 28px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+  max-width: 850px;
+}
+
+.faq-item {
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 24px 28px;
+  background: white;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 28px;
+  color: var(--color-muted);
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 180px;
+  padding: 0 28px 24px;
+}
+
+@media (max-width: 950px) {
+  .service-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
