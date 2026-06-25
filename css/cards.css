@@ -135,3 +135,155 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================
+   PREMIUM SERVICE CARDS V1
+========================================== */
+
+.premium-service-grid {
+  margin-top: 64px;
+}
+
+.premium-service-card {
+  position: relative;
+  overflow: hidden;
+  padding: 38px;
+  border: 1px solid rgba(255,255,255,.7);
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(22px);
+  transition: all .45s cubic-bezier(.22,.61,.36,1);
+}
+
+.premium-service-card::before {
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+
+  left:0;
+
+  width:100%;
+
+  height:4px;
+
+  background:var(--gradient-primary);
+
+  transform:scaleX(0);
+
+  transform-origin:left;
+
+  transition:.45s;
+
+}
+
+.premium-service-card:hover{
+
+  transform:translateY(-12px);
+
+  box-shadow:0 30px 70px rgba(15,23,42,.12);
+
+}
+
+.premium-service-card:hover::before{
+
+  transform:scaleX(1);
+
+}
+
+.service-icon{
+
+  width:68px;
+
+  height:68px;
+
+  border-radius:22px;
+
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  margin-bottom:28px;
+
+  position:relative;
+
+}
+
+.service-icon::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:8px;
+
+  border-radius:16px;
+
+  background:white;
+
+}
+
+.service-icon span{
+
+  width:16px;
+
+  height:16px;
+
+  border-radius:50%;
+
+  background:var(--gradient-primary);
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+.premium-service-card h3{
+
+  margin-bottom:14px;
+
+}
+
+.premium-service-card p{
+
+  margin-bottom:28px;
+
+}
+
+.premium-service-card::after{
+
+  content:"→";
+
+  position:absolute;
+
+  bottom:28px;
+
+  right:30px;
+
+  font-size:22px;
+
+  color:var(--color-primary);
+
+  opacity:0;
+
+  transition:.35s;
+
+}
+
+.premium-service-card:hover::after{
+
+  opacity:1;
+
+  transform:translateX(6px);
+
+}
+
+.premium-service-card {
+  isolation: isolate;
+}
