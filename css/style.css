@@ -362,36 +362,45 @@ body {
 
 .faq-list {
   display: grid;
-  gap: 14px;
+  gap: 18px;
   max-width: 850px;
 }
 
 .faq-item {
   background: white;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
+  transition: 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
 }
 
 .faq-question {
   width: 100%;
-  padding: 22px;
+  padding: 24px 28px;
   background: white;
   border: none;
   text-align: left;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
+  color: var(--text);
 }
 
 .faq-answer {
-  display: none;
-  padding: 0 22px 22px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 28px;
   color: var(--muted);
+  transition: max-height 0.35s ease, padding 0.35s ease;
 }
 
 .faq-item.active .faq-answer {
-  display: block;
+  max-height: 180px;
+  padding: 0 28px 24px;
 }
 
 .cta {
