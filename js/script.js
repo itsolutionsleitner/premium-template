@@ -1,38 +1,28 @@
-const siteHeader = document.getElementById("siteHeader");
-const navToggle = document.getElementById("navToggle");
-const premiumNavLinks = document.getElementById("premiumNavLinks");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-navToggle.addEventListener("click", () => {
-  premiumNavLinks.classList.toggle("active");
-});
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
-    siteHeader.classList.add("scrolled");
-  } else {
-    siteHeader.classList.remove("scrolled");
-  }
-});
-
-menuToggle.addEventListener("click", () => {
+menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
 const revealElements = document.querySelectorAll(".reveal");
 
-const revealOnScroll = () => {
-  revealElements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
 
-    if (elementTop < windowHeight - 100) {
-      element.classList.add("active");
-    }
-  });
-};
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+revealElements.forEach((element) => {
+  revealObserver.observe(element);
+});
 
 const faqItems = document.querySelectorAll(".faq-item");
 
@@ -49,3 +39,12 @@ faqItems.forEach((item) => {
     item.classList.toggle("active");
   });
 });
+
+const form = document.querySelector(".contact-form");
+
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Danke! Das Formular ist aktuell eine Vorlage. Für echte E-Mails kann später Formspree oder EmailJS eingebunden werden.");
+  });
+}
